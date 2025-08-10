@@ -52,7 +52,8 @@ const UserSignup = () => {
     <div>
       <div className='p-7 h-screen flex flex-col justify-between'>
         <div>
-          <img className='w-16 mb-10' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYQy-OIkA6In0fTvVwZADPmFFibjmszu2A0g&s" alt="" />
+          <img className='w-16 mb-4' src="https://cdn-icons-png.flaticon.com/512/3448/3448339.png" alt="Ride Sharing App" />
+          <h1 className='text-3xl font-bold mb-8'>Welcome to our ride sharing app</h1>
 
           <form onSubmit={(e) => {
             submitHandler(e)
