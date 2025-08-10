@@ -90,6 +90,11 @@ const rideSchema = new mongoose.Schema({
     enum: ['pending', 'accepted', 'ongoing', 'completed', 'cancelled'],
     default: 'pending'
   },
+  paymentStatus: {
+    type: String,
+    enum: ['pending', 'completed', 'failed', 'refunded'],
+    default: 'pending'
+  },
   duration: {
     type: Number
   },
@@ -110,6 +115,8 @@ const rideSchema = new mongoose.Schema({
     select: false,
     required: true
   }
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model('ride', rideSchema);

@@ -13,6 +13,9 @@ import CaptainProtectWrapper from './pages/CaptainProtectWrapper'
 import CaptainLogout from './pages/CaptainLogout'
 import Riding from './pages/Riding'
 import CaptainRiding from './pages/CaptainRiding'
+import PaymentTest from './pages/PaymentTest'
+import SimplePaymentTest from './pages/SimplePaymentTest'
+import QuickLogin from './pages/QuickLogin'
 import 'remixicon/fonts/remixicon.css'
 
 const App = () => {
@@ -22,8 +25,11 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Start />} />
         <Route path='/login' element={<UserLogin />} />
+        <Route path='/quick-login' element={<QuickLogin />} />
         <Route path='/riding' element={<Riding />} />
         <Route path='/captain-riding' element={<CaptainRiding />} />
+        <Route path='/payment-test' element={<PaymentTest />} />
+        <Route path='/simple-payment-test' element={<SimplePaymentTest />} />
 
         <Route path='/signup' element={<UserSignup />} />
         <Route path='/captain-login' element={<Captainlogin />} />
