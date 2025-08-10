@@ -26,6 +26,7 @@ const PaymentModal = ({
             console.log('Starting payment with token:', token);
             
             const result = await processPayment(ride._id, token);
+         
             setPaymentStatus('success');
             setTimeout(() => {
                 onPaymentSuccess(result);
@@ -69,6 +70,7 @@ const PaymentModal = ({
                                 <p className="font-medium">{ride?.pickup}</p>
                             </div>
                         </div>
+                       
                         <div className="flex items-center gap-3 mb-3">
                             <i className="ri-map-pin-2-fill text-red-600"></i>
                             <div>
@@ -76,6 +78,7 @@ const PaymentModal = ({
                                 <p className="font-medium">{ride?.destination}</p>
                             </div>
                         </div>
+                      
                         <div className="flex items-center gap-3">
                             <i className="ri-currency-line text-blue-600"></i>
                             <div>

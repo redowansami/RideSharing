@@ -10,6 +10,7 @@ const VehiclePanel = ({ selectVehicle, fare, setConfirmRidePanel, setVehiclePane
         <i className="text-3xl text-gray-200 ri-arrow-down-wide-line"></i>
       </h5>
       <h3 className="text-2xl font-semibold mb-5 px-3 pt-4">Choose a Vehicle</h3>
+     
       <div
         onClick={() => {
           setConfirmRidePanel(true);
@@ -31,6 +32,7 @@ const VehiclePanel = ({ selectVehicle, fare, setConfirmRidePanel, setVehiclePane
         </div>
         <h2 className="text-lg font-semibold">৳{fare?.car || 'N/A'}</h2>
       </div>
+     
       <div
         onClick={() => {
           setConfirmRidePanel(true);
@@ -52,6 +54,7 @@ const VehiclePanel = ({ selectVehicle, fare, setConfirmRidePanel, setVehiclePane
         </div>
         <h2 className="text-lg font-semibold">৳{fare?.motorcycle || 'N/A'}</h2>
       </div>
+     
       <div
         onClick={() => {
           setConfirmRidePanel(true);

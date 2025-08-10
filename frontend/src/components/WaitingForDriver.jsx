@@ -7,6 +7,7 @@ const WaitingForDriver = ({ ride, setVehicleFound, setWaitingForDriver, waitingF
     : 'Waiting for a captain...';
   const vehiclePlate = ride?.captain?.vehicle?.plate || 'N/A';
   const vehicleType = ride?.captain?.vehicle?.vehicleType || 'N/A';
+ 
   const otp = ride?.otp || 'N/A';
   const pickup = ride?.pickup || 'N/A';
   const destination = ride?.destination || 'N/A';
@@ -49,6 +50,7 @@ const WaitingForDriver = ({ ride, setVehicleFound, setWaitingForDriver, waitingF
               <p className="text-sm -mt-1 text-gray-600">{pickup}</p>
             </div>
           </div>
+      
           <div className="flex items-center gap-5 p-3 border-b-2">
             <i className="text-lg ri-map-pin-2-fill"></i>
             <div>
@@ -56,6 +58,7 @@ const WaitingForDriver = ({ ride, setVehicleFound, setWaitingForDriver, waitingF
               <p className="text-sm -mt-1 text-gray-600">{destination}</p>
             </div>
           </div>
+        
           <div className="flex items-center gap-5 p-3">
             <i className="ri-currency-line"></i>
             <div>

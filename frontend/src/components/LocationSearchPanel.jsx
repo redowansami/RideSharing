@@ -10,6 +10,7 @@ const LocationSearchPanel = ({ onSelectLocation }) => {
       const response = await axios.get('/api/maps/autocomplete', {
         params: { input }
       });
+
       setSuggestions(response.data);
     } catch (error) {
       console.error('Error fetching suggestions:', error);
@@ -32,10 +33,12 @@ const LocationSearchPanel = ({ onSelectLocation }) => {
       const response = await axios.get('/api/maps/geocode', {
         params: { address: suggestion }
       });
+
       onSelectLocation({
         address: suggestion,
         coordinates: response.data
       });
+      
       setQuery(suggestion);
       setSuggestions([]);
     } catch (error) {

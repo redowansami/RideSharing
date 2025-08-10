@@ -14,6 +14,7 @@ const RidePopUp = (props) => {
                 </div>
                 <h5 className='text-lg font-semibold'>2.2 KM</h5>
             </div>
+           
             <div className='flex gap-2 justify-between flex-col items-center'>
                 <div className='w-full mt-5'>
                     <div className='flex items-center gap-5 p-3 border-b-2'>
@@ -23,6 +24,7 @@ const RidePopUp = (props) => {
                             <p className='text-sm -mt-1 text-gray-600'>{props.ride?.pickup}</p>
                         </div>
                     </div>
+                   
                     <div className='flex items-center gap-5 p-3 border-b-2'>
                         <i className="text-lg ri-map-pin-2-fill"></i>
                         <div>
@@ -30,6 +32,7 @@ const RidePopUp = (props) => {
                             <p className='text-sm -mt-1 text-gray-600'>{props.ride?.destination}</p>
                         </div>
                     </div>
+                  
                     <div className='flex items-center gap-5 p-3'>
                         <i className="ri-currency-line"></i>
                         <div>
@@ -38,6 +41,7 @@ const RidePopUp = (props) => {
                         </div>
                     </div>
                 </div>
+            
                 <div className='mt-5 w-full '>
                     <button onClick={() => {
                         props.setConfirmRidePopupPanel(true)

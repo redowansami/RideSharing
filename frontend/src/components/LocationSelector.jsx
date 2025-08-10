@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const LocationSelector = ({ onLocationUpdate, currentLocation }) => {
     const [locations, setLocations] = useState([]);
+   
     const [selectedLocation, setSelectedLocation] = useState(currentLocation || '');
     const [isUpdating, setIsUpdating] = useState(false);
 

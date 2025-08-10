@@ -59,6 +59,7 @@ const LiveTracking = () => {
     draw();
 
     const intervalId = setInterval(draw, 1000); // Redraw every second
+
     return () => clearInterval(intervalId);
   }, [currentPosition]);
 
@@ -66,6 +67,7 @@ const LiveTracking = () => {
     <div style={containerStyle}>
       <canvas ref={canvasRef} width="800" height="400" />
     </div>
+    
   );
 };
 
