@@ -113,7 +113,7 @@ const CaptainHome = () => {
     return (
         <div className='h-screen'>
             <div className='fixed p-6 top-0 flex items-center justify-between w-screen'>
-                <img className='w-16' src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="" />
+                <img className='w-16' src="https://cdn-icons-png.flaticon.com/512/3448/3448339.png" alt="Ride Sharing App" />
                 <div className='flex gap-2'>
                     <button 
                         onClick={() => setLocationPanel(true)}
