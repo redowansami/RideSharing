@@ -33,6 +33,7 @@ router.post('/test-payment', async (req, res) => {
     }
 });
 
+
 // Create payment order for a ride
 router.post('/create-order',
     authMiddleware.authUser,
@@ -41,6 +42,7 @@ router.post('/create-order',
     ],
     paymentController.createPaymentOrder
 );
+
 
 // Verify payment after successful payment
 router.post('/verify',
@@ -54,11 +56,13 @@ router.post('/verify',
     paymentController.verifyPayment
 );
 
+
 // Get payment status for a ride
 router.get('/status/:rideId',
     authMiddleware.authUser,
     paymentController.getPaymentStatus
 );
+
 
 // Refund payment (in case of ride cancellation)
 router.post('/refund',

@@ -6,7 +6,8 @@ const { validationResult } = require('express-validator');
 
 module.exports.registerCaptain = async (req, res, next) => {
   const errors = validationResult(req);
-  if (!errors.isEmpty()) {
+  if (!errors.isEmpty()) 
+    {
     console.log('Validation errors:', errors.array());
     return res.status(400).json({ errors: errors.array() });
   }
@@ -36,7 +37,8 @@ module.exports.registerCaptain = async (req, res, next) => {
     const token = captain.generateAuthToken();
 
     res.status(201).json({ token, captain });
-  } catch (error) {
+  } catch (error) 
+  {
     console.error('Register captain error:', error.message);
     res.status(500).json({ message: 'Failed to register captain' });
   }
@@ -44,7 +46,8 @@ module.exports.registerCaptain = async (req, res, next) => {
 
 module.exports.loginCaptain = async (req, res, next) => {
   const errors = validationResult(req);
-  if (!errors.isEmpty()) {
+  if (!errors.isEmpty()) 
+  {
     console.log('Validation errors:', errors.array());
     return res.status(400).json({ errors: errors.array() });
   }
@@ -54,13 +57,15 @@ module.exports.loginCaptain = async (req, res, next) => {
   try {
     const captain = await captainModel.findOne({ email }).select('+password');
 
-    if (!captain) {
+    if (!captain) 
+    {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
 
     const isMatch = await captain.comparePassword(password);
 
-    if (!isMatch) {
+    if (!isMatch) 
+    {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
 

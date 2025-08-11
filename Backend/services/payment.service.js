@@ -1,11 +1,13 @@
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
 
+
 // Initialize Razorpay instance
 const razorpay = new Razorpay({
     key_id: process.env.RAZORPAY_KEY_ID,
     key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
+
 
 module.exports.createPaymentOrder = async ({ amount, currency = 'BDT', receipt }) => {
     try {
@@ -23,6 +25,7 @@ module.exports.createPaymentOrder = async ({ amount, currency = 'BDT', receipt }
     }
 };
 
+
 module.exports.verifyPaymentSignature = async ({ razorpay_order_id, razorpay_payment_id, razorpay_signature }) => {
     try {
         const body = razorpay_order_id + "|" + razorpay_payment_id;
@@ -37,6 +40,7 @@ module.exports.verifyPaymentSignature = async ({ razorpay_order_id, razorpay_pay
     }
 };
 
+
 module.exports.getPaymentDetails = async (paymentId) => {
     try {
         const payment = await razorpay.payments.fetch(paymentId);
@@ -45,6 +49,7 @@ module.exports.getPaymentDetails = async (paymentId) => {
         throw new Error(`Failed to fetch payment details: ${error.message}`);
     }
 };
+
 
 module.exports.createRefund = async ({ paymentId, amount, notes = {} }) => {
     try {

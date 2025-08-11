@@ -285,6 +285,7 @@ module.exports.getDistanceTime = async (origin, destination) => {
   }
 };
 
+
 module.exports.getAutoCompleteSuggestions = async (input) => {
   try {
     if (!input) {
@@ -315,6 +316,7 @@ module.exports.getAutoCompleteSuggestions = async (input) => {
   }
 };
 
+
 module.exports.getCaptainsInTheRadius = async (ltd, lng, radius) => {
   try {
     const captains = await captainModel.find({
@@ -336,6 +338,7 @@ module.exports.getCaptainsInTheRadius = async (ltd, lng, radius) => {
     return [];
   }
 };
+
 
 module.exports.getAvailableLocations = async () => {
   try {

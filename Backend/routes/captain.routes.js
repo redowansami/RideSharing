@@ -34,6 +34,8 @@ router.get('/logout', authMiddleware.authCaptain, captainController.logoutCaptai
 
 module.exports = router;
 */
+
+
 const captainController = require('../controllers/captain.controller');
 const express = require('express');
 const router = express.Router();

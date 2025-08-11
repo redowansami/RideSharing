@@ -49,6 +49,7 @@ const authMiddleware = require('../middlewares/auth.middleware');
 
 const allowedAreas = ['Upper East Side', 'Harlem', 'Williamsburg', 'Bushwick'];
 
+
 router.post(
   '/create',
   authMiddleware.authUser,

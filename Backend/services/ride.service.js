@@ -159,6 +159,7 @@
 //     return ride;
 // }
 
+
 const rideModel = require('../models/ride.model');
 const mapService = require('./maps.service');
 const crypto = require('crypto');
@@ -210,6 +211,7 @@ function getOtp(num) {
   return 123456;
 }
 
+
 module.exports.createRide = async ({ user, pickup, destination, vehicleType }) => {
   if (!user || !pickup || !destination || !vehicleType) {
     throw new Error('All fields are required');
@@ -258,6 +260,7 @@ module.exports.confirmRide = async ({ rideId, captain }) => {
 
   return ride;
 };
+
 
 module.exports.startRide = async ({ rideId, otp, captain }) => {
   if (!rideId || !otp) {

@@ -57,6 +57,8 @@
 
 // module.exports = mongoose.model('ride', rideSchema);
 
+
+
 const mongoose = require('mongoose');
 
 const rideSchema = new mongoose.Schema({
@@ -118,5 +120,6 @@ const rideSchema = new mongoose.Schema({
 }, {
   timestamps: true
 });
+
 
 module.exports = mongoose.model('ride', rideSchema);
